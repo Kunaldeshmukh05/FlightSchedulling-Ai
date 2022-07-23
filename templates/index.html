@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <title>AI PROJECT</title>
+</head>
+
+<body>
+
+  <body style="background-color: #e0e0e0;">
+    <div class="card mx-auto mt-5 shadow-lg p-2" style="width: 500px;">
+      <div class="card-header">
+        <p class="text-center" style="background-color: #eee; font-size: xx-large; font-weight:bolder;">FLIGHT
+          SCHEDULLING</p>
+      </div>
+      <div class="card-body" style="background-color: #F5F5F5;">
+        <form action="" method="POST" onsubmit="return check(this);" class="form-group">
+          <div class="m-3">
+            <label for="input1" class="form-label">SOURCE</label>
+            <input type="text" name="source" class="form-control" id="input1" placeholder="Enter Source Airport "
+              style="background-color: inherit; border-color: #c0c0c0;">
+          </div>
+          <div class="m-3">
+            <label for="input2" class="form-label">DESTINATION</label>
+            <input type="text" name="destination" class="form-control" id="input2"
+              placeholder="Enter Destination Airport" style="background-color: inherit; border-color: #c0c0c0;">
+          </div>
+          <div class="m-3 d-grid">
+            <button class="btn btn-primary" type="submit" name="submit" > SCHEDULE </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"></script>
+    <br><br><br>
+    <h1 style="text-align: center;">{{ context }}</h1>
+
+    <script>
+      function check(theForm) {
+      
+        if (theForm.source.value == theForm.destination.value) { 
+            alert('enter different airport name');
+            return false;
+        } 
+        return true;
+      }
+    </script>
+
+  </body>
+
+</html>
